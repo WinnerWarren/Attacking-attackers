@@ -593,7 +593,7 @@
 <!-- Title Screen -->
 <div id="title-screen">
   <div class="title-icon">&#9876;&#65039;</div>
-  <h1>ANCIENT WARFARE</h1>
+  <h1>ATTACKING ATTACKERS</h1>
   <div class="title-sub">3D Army Battle Simulator</div>
   <button class="punk-btn" id="continue-btn" onclick="continueCampaign()" style="display:none">CONTINUE CAMPAIGN</button>
   <button class="punk-btn" onclick="startCampaignMode()">CAMPAIGN</button>
@@ -905,7 +905,7 @@ const SFX = (() => {
     arrowHit() {
       play(() => {
         const c = getCtx();
-        const n = noise(0.05, 0.2);
+        const n = noise(0.05, 0.7);
         const g = c.createGain();
         g.gain.setValueAtTime(0.2, c.currentTime);
         g.gain.exponentialRampToValueAtTime(0.01, c.currentTime + 0.05);
@@ -918,7 +918,7 @@ const SFX = (() => {
         const c = getCtx();
         const o = c.createOscillator();
         o.type = 'sawtooth';
-        o.frequency.setValueAtTime(80, c.currentTime);
+        o.frequency.setValueAtTime(200, c.currentTime);
         o.frequency.exponentialRampToValueAtTime(40, c.currentTime + 0.3);
         const g = c.createGain();
         g.gain.setValueAtTime(0.2, c.currentTime);
@@ -1057,7 +1057,7 @@ const UNIT_DEFS = {
   cavalry:   { name: 'Cavalry',   cost: 25, hp: 90,  damage: 20, speed: 3.0, range: 1.8, icon: '&#127943;', special: 'First hit 2x (charge)' },
   catapult:  { name: 'Catapult',  cost: 40, hp: 80,  damage: 45, speed: 0.4, range: 12,  icon: '&#129704;', special: 'Splash radius 3, very slow', splash: 3 },
   elephant:  { name: 'War Elephant', cost: 50, hp: 300, damage: 30, speed: 0.8, range: 2.0, icon: '&#128024;', special: 'Tank, trample', shopRequired: 'aw_war_elephant' },
-  trebuchet: { name: 'Trebuchet',   cost: 55, hp: 60,  damage: 60, speed: 0.3, range: 15,  icon: '&#9732;',   special: 'Heavy siege, splash 4', splash: 4 },
+  X bow: { name: 'X bow',   cost: 1, hp: 2000,  damage: 10000000, speed: 0.53, range: 70,  icon: '&#9732;',   special: 'Heavy siege, splash 4', splash: 4 },
   ballista:  { name: 'Ballista',    cost: 30, hp: 70,  damage: 35, speed: 0.5, range: 11,  icon: '&#127993;', special: 'Precision bolt, long range' },
 };
 
